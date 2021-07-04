@@ -3,11 +3,12 @@
     --secondary: #bbdbd8;
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 body {
     margin: 0;
     background: var(--secondary);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #wrapper {

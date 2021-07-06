@@ -2,8 +2,9 @@
 :root {
     --primary: white;
     --secondary: #7eb1ac;
-    --faded: linear-gradient(to right, #bbdbd8, white);
-    --fill: linear-gradient(to right, #bbdbd8, #7eb1ac);
+    --secondary-lighter: #bbdbd8;
+    --faded: linear-gradient(to right, var(--secondary-lighter), var(--primary));
+    --fill: linear-gradient(to right, var(--secondary-lighter), var(--secondary));
 }
 
 body {
@@ -62,6 +63,8 @@ header {
     background: var(--fill);
 }
 
+
+
 aside {
     padding-left: 15px;
     margin-left: 15px;
@@ -75,6 +78,8 @@ img {
     height: 200px;
     object-fit: contain;
     padding-bottom: 140px;
+    
+    
 }
 
 img:hover {
@@ -113,6 +118,8 @@ a:hover {
     color: tomato;
 }
 
+
+
 .linktext:hover {
     color: tomato;
 }
@@ -136,4 +143,41 @@ a:hover {
     to {
         transform: scale(1.2);
     }
+}
+
+#theme-picker {
+    position: relative;
+}
+
+.theme-picker__theme-menu {
+    display: none;
+    border: solid 1px gray;
+    padding: 12px;
+    border-radius: 4px;
+    background:var(--primary);
+    position: absolute;
+    right: 0;
+    width: 160px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.theme-picker__theme-menu.open {
+    display: block;
+}
+
+.theme-picker__theme-menu__theme-button {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(45deg);
+    border: solid 2px white;
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.theme-picker__theme-menu__theme-button--color {
+    flex: 1;
 }

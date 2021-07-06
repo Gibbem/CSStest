@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>Modul 2 - uppgift 2</title>
@@ -8,7 +8,13 @@
   <body>
 
     <div id="wrapper">
-		<header><h1>Smakprov ur studieguiden för webbutveckling 2</h1></header>
+		<header>
+			<h1>Smakprov ur studieguiden för webbutveckling 2</h1>
+			<div id="theme-picker">
+				<button onclick="toggleThemePicker()">Tema</button>
+				<div class="theme-picker__theme-menu"></div>
+			</div>
+		</header>
 	
 		<article>
 			<section>
@@ -34,5 +40,6 @@
 		</aside>
 		<footer>&#169;Hermods</footer>
 	</div>
+	<script src="scripts.js"></script>
 </body>
 </html>
